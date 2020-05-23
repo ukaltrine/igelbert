@@ -21,7 +21,7 @@ class TaskListForm extends Component {
     e.preventDefault();
     if (this.state.taskTitle !== "") {
       this.props.addTaskList(this.state);
-      this.setState({ task: "" });
+      this.setState({ taskTitle: "" });
     }
   }
 
