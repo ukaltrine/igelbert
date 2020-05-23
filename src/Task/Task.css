@@ -1,0 +1,13 @@
+.task {
+  padding: 1em;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(12px + 1vmin);
+  border: 2px solid #dddddd99;
+  width: calc(25rem + 1vmin);
+}
+p {
+  text-align: left;
+  overflow-wrap: break-word;
+}

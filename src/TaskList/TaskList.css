@@ -1,0 +1,6 @@
+.taskList {
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
