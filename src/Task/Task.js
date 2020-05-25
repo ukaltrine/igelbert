@@ -10,12 +10,14 @@ class Task extends Component {
     return (
       <div className="task m-1">
         <p>{task}</p>
-        <button className="btn btn-outline-secondary">
-          <i className="fas fa-pencil-alt"></i>
-        </button>
-        <button className="btn btn-outline-secondary">
-          <i className="fas fa-trash-alt"></i>
-        </button>
+        <div className="buttons">
+          <button className="btn btn-outline-warning">
+            <i className="fas fa-pencil-alt"></i>
+          </button>
+          <button className="btn btn-outline-warning">
+            <i className="fas fa-trash-alt"></i>
+          </button>
+        </div>
       </div>
     );
   }

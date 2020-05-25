@@ -39,8 +39,8 @@ class TaskListForm extends Component {
             aria-describedby="basic-addon2"
           />
           <div className="input-group-append">
-            <button className="btn btn-outline-secondary">
-              <i className="fas fa-save"> Add</i>
+            <button className="btn btn-warning">
+              <i className="fas fa-save"> Add List</i>
             </button>
           </div>
         </div>

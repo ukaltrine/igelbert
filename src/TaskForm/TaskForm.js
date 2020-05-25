@@ -30,13 +30,14 @@ class TaskForm extends Component {
         <div className="input-group">
           <input
             className="form-control"
+            placeholder="Add new task..."
             value={this.state.task}
             onChange={this.handleChange}
             name="task"
           />
           <div className="input-group-append">
-            <button className="btn btn-outline-secondary">
-              <i className="fas fa-save"> Add</i>
+            <button className="btn btn-warning">
+              <i className="fas fa-save"> Add Task</i>
             </button>
           </div>
         </div>

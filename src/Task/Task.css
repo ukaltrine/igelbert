@@ -2,12 +2,18 @@
   padding: 1em;
   background-color: #fefefe;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: calc(12px + 1vmin);
-  border: 2px solid #dddddd99;
   width: calc(25rem + 1vmin);
+  border-radius: 0.15em;
 }
 p {
   text-align: left;
   overflow-wrap: break-word;
+}
+
+.buttons {
+  display: inline-flex;
+  flex-direction: row;
 }
