@@ -26,7 +26,7 @@ class TaskForm extends Component {
 
   render() {
     return (
-      <form className="TaskForm  m-1" onSubmit={this.handleSubmit}>
+      <form className="TaskForm m-1" onSubmit={this.handleSubmit}>
         <div className="input-group">
           <input
             className="form-control"

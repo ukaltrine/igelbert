@@ -10,6 +10,8 @@ class TaskList extends Component {
       tasks: [],
     };
     this.addTask = this.addTask.bind(this);
+    this.deleteTask = this.deleteTask.bind(this);
+    this.updateTask = this.updateTask.bind(this);
   }
 
   addTask(task) {
@@ -17,14 +19,34 @@ class TaskList extends Component {
       tasks: [...this.state.tasks, task],
     });
   }
+  deleteTask(id) {
+    const newTasks = this.state.tasks.filter((task, index) => {
+      console.log(task, index);
+      return index !== id;
+    });
 
+    console.log(newTasks);
+    this.setState({
+      tasks: newTasks,
+    });
+  }
+
+  updateTask(id) {}
   render() {
     return (
       <div className="taskList p-3 m-3">
         <p>List Title: {this.props.tasksList.taskTitle}</p>
         <TaskForm addTask={this.addTask} />
         {this.state.tasks.map((task, index) => {
-          return <Task key={index} task={task} />;
+          return (
+            <Task
+              key={index}
+              taskTitle={task}
+              id={index}
+              deleteTask={this.deleteTask}
+              updateTask={this.updateTask}
+            />
+          );
         })}
       </div>
     );
