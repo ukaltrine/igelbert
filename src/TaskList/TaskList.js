@@ -32,15 +32,11 @@ class TaskList extends Component {
   }
 
   updateTask(value, id) {
-    const updatedTasks = this.state.tasks.map((taskTitle, index) => {
-      if (index === id) {
-        taskTitle = value;
-      }
-      return taskTitle;
-    });
-    console.log(updatedTasks);
+    const prevTasks = this.state.tasks;
+    prevTasks[id] = value;
+    const newTasks = prevTasks;
     this.setState({
-      tasks: updatedTasks,
+      tasks: newTasks,
     });
   }
   render() {

@@ -28,7 +28,7 @@ class Task extends Component {
   }
 
   updateTask() {
-    this.props.updateTask(this.props.id);
+    this.props.updateTask(this.state.taskTitle, this.props.id);
   }
 
   handleChange(e) {
