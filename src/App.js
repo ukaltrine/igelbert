@@ -7,20 +7,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      taskList: [],
+      List: [],
     };
-    this.addTasks = this.addTasks.bind(this);
     this.addTaskList = this.addTaskList.bind(this);
   }
 
-  addTasks(tasks) {
+  addTaskList(newList) {
     this.setState({
-      taskList: [...this.state.taskList, tasks],
-    });
-  }
-  addTaskList(tasks) {
-    this.setState({
-      taskList: [...this.state.taskList, tasks],
+      List: [...this.state.List, newList],
     });
   }
   render() {
@@ -30,13 +24,9 @@ class App extends Component {
           <TaskListForm className="taskform" addTaskList={this.addTaskList} />
         </div>
         <div className="App-header">
-          {this.state.taskList.map((tasksList, index) => {
+          {this.state.List.map((taskList, index) => {
             return (
-              <TaskList
-                key={index}
-                addTasks={this.addTasks}
-                tasksList={tasksList}
-              />
+              <TaskList key={index} addTasks={this.addTasks} List={taskList} />
             );
           })}
         </div>

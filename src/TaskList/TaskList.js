@@ -47,7 +47,7 @@ class TaskList extends Component {
     return (
       <div className="taskList p-3 m-3">
         <p>
-          List Title: <strong>{this.props.tasksList.taskListTitle}</strong>
+          List Title: <strong>{this.props.List.taskListTitle}</strong>
         </p>
         <TaskForm addTask={this.addTask} />
         {this.state.tasks.map((task, index) => {
