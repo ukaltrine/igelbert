@@ -4,7 +4,7 @@ class TaskForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      task: "",
+      taskTitle: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,9 +18,9 @@ class TaskForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.task !== "") {
-      this.props.addTask(this.state.task);
-      this.setState({ task: "" });
+    if (this.state.taskTitle !== "") {
+      this.props.addTask(this.state.taskTitle);
+      this.setState({ taskTitle: "" });
     }
   }
 
@@ -31,9 +31,9 @@ class TaskForm extends Component {
           <input
             className="form-control"
             placeholder="Add new task..."
-            value={this.state.task}
+            value={this.state.taskTitle}
             onChange={this.handleChange}
-            name="task"
+            name="taskTitle"
           />
           <div className="input-group-append">
             <button className="btn btn-warning">

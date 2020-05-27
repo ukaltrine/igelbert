@@ -31,11 +31,24 @@ class TaskList extends Component {
     });
   }
 
-  updateTask(id) {}
+  updateTask(value, id) {
+    const updatedTasks = this.state.tasks.map((taskTitle, index) => {
+      if (index === id) {
+        taskTitle = value;
+      }
+      return taskTitle;
+    });
+    console.log(updatedTasks);
+    this.setState({
+      tasks: updatedTasks,
+    });
+  }
   render() {
     return (
       <div className="taskList p-3 m-3">
-        <p>List Title: {this.props.tasksList.taskTitle}</p>
+        <p>
+          List Title: <strong>{this.props.tasksList.taskListTitle}</strong>
+        </p>
         <TaskForm addTask={this.addTask} />
         {this.state.tasks.map((task, index) => {
           return (

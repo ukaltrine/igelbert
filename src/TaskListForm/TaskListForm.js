@@ -4,7 +4,7 @@ class TaskListForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      taskTitle: "",
+      taskListTitle: "",
       tasks: [],
     };
     this.handleChange = this.handleChange.bind(this);
@@ -19,9 +19,9 @@ class TaskListForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.taskTitle !== "") {
+    if (this.state.taskListTitle !== "") {
       this.props.addTaskList(this.state);
-      this.setState({ taskTitle: "" });
+      this.setState({ taskListTitle: "" });
     }
   }
 
@@ -32,10 +32,9 @@ class TaskListForm extends Component {
           <input
             className="form-control"
             placeholder="Add new list..."
-            className="form-control"
-            value={this.state.taskTitle}
+            value={this.state.taskListTitle}
             onChange={this.handleChange}
-            name="taskTitle"
+            name="taskListTitle"
             aria-describedby="basic-addon2"
           />
           <div className="input-group-append">
